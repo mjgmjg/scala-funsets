@@ -115,5 +115,12 @@ class FunSetSuite extends FunSuite {
 	     assert(forall(listSet(List(1,2,3)),x=>x<5),"dla ograniczonej listy 1,2,3 warunek spe³niony x<5")
 	     assert(!forall(listSet(List(1,2,3,10)),x=>x<5),"dla ograniczonej listy 1,2,3,10 warunek nie spe³niony x<5")
    }
-  
+
+   test("Returns whether there exists a bounded integer within `s` that satisfies `p`.") {
+	     assert(exists(listSet(List(1,2,3)),x=>x==3),"dla ograniczonej listy 1,2,3 warunek spe³niony x<5")
+	     //powinno siê wywaliæ - poza zakresem
+	     assert(!exists(listSet(List(1,2,3,100000)),x=>x==100000),"dla ograniczonej listy 1,2,3 warunek spe³niony x<5")
+   }
+   
+   
 }
