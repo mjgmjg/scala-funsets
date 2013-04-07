@@ -28,8 +28,6 @@ object FunSets {
   /**
    * pomocnicza implementacja setu z wieloma wartoœciami
    */
-  
-  
   def listSet(elems:List[Int]):Set = i => elems.contains(i)
 
   /**
@@ -61,6 +59,8 @@ object FunSets {
    */
   def filter(s: Set, p: Int => Boolean): Set = {
     //Ÿle !!!
+    //o co tu chodzi
+    //TODO rozwi¹zaæ
     i=>s(i) && p(i)		  
   }
 
@@ -87,7 +87,7 @@ object FunSets {
    */
   def exists(s: Set, p: Int => Boolean): Boolean = {
     def iter(a: Int): Boolean = {
-      if (a<=bound*(-1)) true
+      if (a<=bound*(-1)) false
       else if ( s(a) && p(a)) true
       else iter(a-1)
     }
