@@ -26,7 +26,7 @@ object FunSets {
   }
   
   /**
-   * pomocnicza implementacja setu z wieloma wartoœciami
+   * pomocnicza implementacja setu z wieloma wartosciami
    */
   def listSet(elems:List[Int]):Set = i => elems.contains(i)
 
@@ -58,9 +58,9 @@ object FunSets {
    * Returns the subset of `s` for which `p` holds.
    */
   def filter(s: Set, p: Int => Boolean): Set = {
-    //Ÿle !!!
+    //zle !!!
     //o co tu chodzi
-    //TODO rozwi¹zaæ
+    //TODO rozwiazac
     i=>s(i) && p(i)		  
   }
 
