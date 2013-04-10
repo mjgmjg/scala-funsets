@@ -61,6 +61,7 @@ object FunSets {
     //zle !!!
     //o co tu chodzi
     //TODO rozwiazac
+    //update - testy przechodzi ... chyba jest ok ?
     i=>s(i) && p(i)		  
   }
 
@@ -85,6 +86,8 @@ object FunSets {
    * Returns whether there exists a bounded integer within `s`
    * that satisfies `p`.
    */
+  
+  //TODO - do poprawienia - powinno uzywac forall
   def exists(s: Set, p: Int => Boolean): Boolean = {
     def iter(a: Int): Boolean = {
       if (a<=bound*(-1)) false
